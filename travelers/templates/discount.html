@@ -46,7 +46,7 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Travelers</a></h1>
+            <h1 class="mb-0"><a href="{{url_for('home_page')}}" class="text-black h2 mb-0">Travelers</a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
@@ -55,7 +55,7 @@
                 <li>
                   <a href="{{url_for('home_page')}}">Home</a>
                 </li>
-                <li class="has-children">
+<!--                 <li class="has-children">
                   <a href="destination.html">Destinations</a>
                   <ul class="dropdown">
                     <li><a href="#">Japan</a></li>
@@ -63,13 +63,13 @@
                     <li><a href="#">China</a></li>
                     <li><a href="#">France</a></li>
                   </ul>
-                </li>
+                </li> -->
                 
-                <li class="active"><a href="discount.html">Discount</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li class="active"><a href="{{url_for('discount_page')}}">Discount</a></li>
+                <li><a href="{{url_for('about_page')}}">About</a></li>
+                <li><a href="{{url_for('blog_page')}}">Blog</a></li>
                 
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{url_for('contact_page')}}">Contact</a></li>
                 <!-- <li><a href="booking.html">Book Online</a></li> -->
               </ul>
             </nav>
@@ -107,7 +107,7 @@
 
    
 
-    <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover" style="background-image: url(static/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
 
@@ -139,7 +139,7 @@
           </div>
           <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/02-rome.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/02-rome.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$390</del> <span class="mx-1 text-white ">&mdash;</span> $100</strong>
                 <h3 class="unit-1-heading">Rome, Italy</h3>
@@ -149,7 +149,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/01-greece.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/01-greece.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$590</del> <span class="mx-1 text-white ">&mdash;</span> $120</strong>
                 <h3 class="unit-1-heading">Santorini, Greece</h3>
@@ -158,7 +158,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/02-rome.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/02-rome.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$390</del> <span class="mx-1 text-white ">&mdash;</span> $100</strong>
                 <h3 class="unit-1-heading">Rome, Italy</h3>
@@ -167,7 +167,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/03-japan.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/03-japan.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$490</del> <span class="mx-1 text-white ">&mdash;</span> $110</strong>
                 <h3 class="unit-1-heading">Mount Fuji, Japan</h3>
@@ -177,7 +177,7 @@
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/04-dubai.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/04-dubai.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$320</del> <span class="mx-1 text-white ">&mdash;</span> $70</strong>
                 <h3 class="unit-1-heading">Camels, Dubai</h3>
@@ -186,7 +186,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/05-london.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/05-london.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$290</del> <span class="mx-1 text-white ">&mdash;</span> $50</strong>
                 <h3 class="unit-1-heading">Elizabeth Tower, London</h3>
@@ -195,7 +195,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <a href="#" class="unit-1 text-center">
-              <img src="images/06-australia.jpg" alt="Image" class="img-fluid">
+              <img src="static/images/06-australia.jpg" alt="Image" class="img-fluid">
               <div class="unit-1-text">
                 <strong class="text-primary mb-2 d-block"><del class="text-white">$2,500</del> <span class="mx-1 text-white ">&mdash;</span> $500</strong>
                 <h3 class="unit-1-heading">Opera House, Australia</h3>
@@ -223,7 +223,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-6 mb-5">
-                  <img src="images/img_1.jpg" alt="Image" class="img-md-fluid">
+                  <img src="static/images/img_1.jpg" alt="Image" class="img-md-fluid">
                 </div>
                 <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
                   <p class="text-black lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;</p>
@@ -237,7 +237,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-6 mb-5">
-                  <img src="images/img_2.jpg" alt="Image" class="img-md-fluid">
+                  <img src="static/images/img_2.jpg" alt="Image" class="img-md-fluid">
                 </div>
                 <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
                   <p class="text-black lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;</p>
@@ -251,7 +251,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-6 mb-5">
-                  <img src="images/img_4.jpg" alt="Image" class="img-md-fluid">
+                  <img src="static/images/img_4.jpg" alt="Image" class="img-md-fluid">
                 </div>
                 <div class="overlap-left col-lg-6 bg-white p-md-5 align-self-center">
                   <p class="text-black lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;</p>
@@ -422,19 +422,19 @@
     </footer>
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/aos.js"></script>
+  <script src="static/js/jquery-3.3.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/jquery.stellar.min.js"></script>
+  <script src="static/js/jquery.countdown.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.min.js"></script>
+  <script src="static/js/aos.js"></script>
 
-  <script src="js/main.js"></script>
+  <script src="static/js/main.js"></script>
     
   </body>
 </html>
