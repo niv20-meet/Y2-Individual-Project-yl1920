@@ -4,7 +4,9 @@
     <title>Travalers &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- google sing in id  -->
+    <meta name="google-signin-client_id" content="1054534805692-uvrkmbov5nibn5o9u9v4f4nifn72n2dt.apps.googleusercontent.com">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
@@ -80,7 +82,7 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <button onclick="" class="pl-0 pr-3 text-black"><span class="fa fa-user-circle"></span></button>
+                <a href="{{url_for('login_page')}}" id="singin" class="pl-0 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
                 </li>
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-tripadvisor"></span></a>
@@ -574,23 +576,15 @@
   </div>
 
    <script>
+   document.getElementById("singin").onclick = function() {()};
+    
     function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
     function onFailure(error) {
       console.log(error);
     }
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
+    function login() {}
   </script>
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>

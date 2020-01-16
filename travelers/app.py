@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = "MY_SUPER_SECRET_KEY"
 
 
-@app.route('/')
+@app.route('/l')
 def home_page():
 	return render_template("index.html")
 
@@ -22,6 +22,9 @@ def booking_page():
 def discount_page():
 	return render_template("discount.html")
 
+@app.route('/')
+def login_page():
+	return render_template("login.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
