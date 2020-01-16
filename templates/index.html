@@ -82,7 +82,10 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                <a href="{{url_for('login_page')}}" id="singin" class="pl-0 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
+                  <a class="pl-0 pr-3 text-black" href="#" onclick="signOut();">Sign out</a>
+                </li>
+                <li>
+                <a href="{{url_for('login_page')}}" id="singin" class="pl-3 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
                 </li>
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-tripadvisor"></span></a>
@@ -587,6 +590,15 @@
     function login() {}
   </script>''' -->
 
+
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
   <script src="static/js/jquery-3.3.1.min.js"></script>
   <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
