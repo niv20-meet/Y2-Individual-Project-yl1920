@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
     <link rel="stylesheet" href="static/fonts/icomoon/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/magnific-popup.css">
     <link rel="stylesheet" href="static/css/jquery-ui.css">
@@ -64,7 +64,6 @@
                   </ul>
                 </li> -->
                 
-                <li><a href="{{url_for('discount_page')}}">Discount</a></li>
                 <li><a href="{{url_for('about_page')}}">About</a></li>
                 <li><a href="{{url_for('blog_page')}}">Blog</a></li>
                 
@@ -78,8 +77,15 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <a href="#" class="pl-0 pr-3 text-black"><span class="icon-tripadvisor"></span></a>
+                  <a class="pl-0 pr-3 text-black" href="#" onclick="signOut();"><span class="fa fa-sign-out"></span></a>
                 </li>
+                
+
+                <li>
+                <a href="{{url_for('login_page')}}" id="singin" class="pl-3 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
+                </li>
+
+
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-twitter"></span></a>
                 </li>

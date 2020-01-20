@@ -51,7 +51,7 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Travelers</a></h1>
+            <h1 class="mb-0"><a href="{{url_for('home_page')}}" class="text-black h2 mb-0">Travelers</a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
@@ -70,9 +70,9 @@
                   </ul>
                 </li> -->
                 
-                <li><a href="{{url_for('booking_page')}}">booking</a></li>
-                <li><a href="{{url_for('discount_page')}}">Discount</a></li>
-                <li><a href="{{url_for('home_page')}}">Blog</a></li>
+                <li><a href="{{url_for('about_page')}}">About</a></li>
+               
+                <li><a href="{{url_for('blog_page')}}">Blog</a></li>
                 
                 <li><a href="{{url_for('contact_page')}}">Contact</a></li>
                 <!-- <li><a href="booking.html">Book Online</a></li> -->
@@ -84,16 +84,14 @@
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <a class="pl-0 pr-3 text-black" href="#" onclick="signOut();">Sign out</a>
+                  <a class="pl-0 pr-3 text-black" href="#" onclick="signOut();"><span class="fa fa-sign-out"></span></a>
                 </li>
                 
-                <div  class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-<!--                 <li>
-                <a href="{{url_for('login_page')}}" id="singin" class="pl-3 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
-                </li> -->
+
                 <li>
-                  <a href="#" class="pl-3 pr-3 text-black"><span class="icon-tripadvisor"></span></a>
+                <a href="{{url_for('login_page')}}" id="singin" class="pl-3 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
                 </li>
+
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-twitter"></span></a>
                 </li

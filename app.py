@@ -24,7 +24,7 @@ def discount_page():
 
 @app.route('/login_page')
 def login_page():
-	return render_template("login.html")
+	return render_template("login1.html")
 
 
 @app.route('/about')

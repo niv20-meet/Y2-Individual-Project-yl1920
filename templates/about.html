@@ -4,7 +4,7 @@
     <title>Travalers &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
     <link rel="stylesheet" href="static/fonts/icomoon/style.css">
 
@@ -29,7 +29,7 @@
   <body>
   
   <div class="site-wrap">
-S
+
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -64,8 +64,7 @@ S
                   </ul>
                 </li> -->
                 
-                <li><a href="discount.html">Discount</a></li>
-                <li class="active"><a href="about.html">About</a></li>
+                <li class="active"><a href="{{url_for('about_page')}}">About</a></li>
                 <li><a href="{{url_for('blog_page')}}">Blog</a></li>
                 
                 <li><a href="{{url_for('contact_page')}}">Contact</a></li>
@@ -78,8 +77,14 @@ S
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
-                  <a href="#" class="pl-0 pr-3 text-black"><span class="icon-tripadvisor"></span></a>
+                  <a class="pl-0 pr-3 text-black" href="#" onclick="signOut();"><span class="fa fa-sign-out"></a>
                 </li>
+                
+
+                <li>
+                <a href="{{url_for('login_page')}}" id="singin" class="pl-3 pr-3 text-black"><span class="fa fa-user-circle"></span></a>
+                </li>
+
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-twitter"></span></a>
                 </li>
