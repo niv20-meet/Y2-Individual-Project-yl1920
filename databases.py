@@ -1,4 +1,4 @@
-from model import Base, Product
+from model import Base
 
 
 from sqlalchemy import create_engine
@@ -10,9 +10,10 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def add_user(password,email,picture_link):
+def add_user(username,password,email,picture_link):
 
-    user_object = user(
+    user_object = User(
+        username = username,
         email=email,
         password=password,
         picture_link=picture_link
@@ -23,18 +24,20 @@ def add_user(password,email,picture_link):
 def edit_password(email,new_password):
 
      user_object = session.query(
-     user).filter_by(
+     User).filter_by(
      email).first()
-    user_object.password=new_password
-    session.commit()
+     user_object.password=new_password
+     session.commit()
 
+def get_user(username):
+    """Find the first user in the DB, by their username."""
+    return session.query(User).filter_by(username=username).first()
 
 
 def query_all():
-
-  all_users = session.query(
-    user).all()
-   return all_users
+    all_users = session.query(
+    User).all()
+    return all_users
 
 
 

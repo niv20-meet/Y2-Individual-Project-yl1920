@@ -6,14 +6,12 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class user(Base):
+class User(Base):
   	__tablename__ = 'user'
-   id = Column(Integer, primary_key=True)
-   email = Column(String)
-   password = Column(string)
-   picture_link = Column(String)
+	id = Column(Integer, primary_key=True)
+	username = Column(String)
+	email = Column(String)
+	password = Column(String)
+	picture_link = Column(String)
    
 
-class cart(Base):
-	id=Column(Integer,primary_key=True)
-	pid=Column(Integer)
