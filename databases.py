@@ -1,4 +1,5 @@
 from model import Base
+from model import *
 
 
 from sqlalchemy import create_engine
@@ -10,13 +11,13 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def add_user(username,password,email,picture_link):
+def add_user(username,password,email):
 
     user_object = User(
         username = username,
         email=email,
         password=password,
-        picture_link=picture_link
+        
         )
     session.add(user_object)
     session.commit()
