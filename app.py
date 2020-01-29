@@ -1,6 +1,7 @@
 from databases import *
 from flask import Flask, request, redirect, url_for, render_template
 from flask import session as login_session
+import json
 # from databases import query_all
 
 app = Flask(__name__)
@@ -33,9 +34,10 @@ def about_page():
 def blog_page():
 	return render_template("blog.html")
 
-@app.route('/getmethod/<jsdata>')
+@app.route('/getmethod/<string:jsdata>')
 def get_javascript_data(jsdata):
-    return jsdata
+    print(jsdata)
+    return 
 
 @app.route('/login', methods=['POST','GET'])
 def login_page():
