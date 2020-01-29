@@ -33,7 +33,9 @@ def about_page():
 def blog_page():
 	return render_template("blog.html")
 
-
+@app.route('/getmethod/<jsdata>')
+def get_javascript_data(jsdata):
+    return jsdata
 
 @app.route('/login', methods=['POST','GET'])
 def login_page():
@@ -71,7 +73,7 @@ def signup():
 		add_user(request.form['username'],request.form['password'],request.form['email'])
 		return redirect(url_for("home_page"))
 	return redirect(url_for('signup_page'))
-	# print(user)
+	print(user)
 
 
 @app.route('/logged-in' ,methods=['POST','GET'])
